@@ -6,7 +6,7 @@
  * Time: 4:39 PM
  */
 
-require_once ('MysqlDb.php');
+require_once(__DIR__ . '/MysqlDB.php');
 
 $db = MysqlDB::getInstance();
 
@@ -28,3 +28,4 @@ header('Content-Transfer-Encoding: binary');
 header('Content-Length: '.filesize('https://s3.ap-south-1.amazonaws.com/asd512.email/small_image.gif'));	// provide file size
 readfile('https://s3.ap-south-1.amazonaws.com/asd512.email/small_image.gif');		// push it out
 exit();
+
